@@ -18,6 +18,8 @@ input,target
 "[1001,1005]","[1003,1007]"
 ```
 
+Para una explicación detallada sobre cómo se construye este CSV a partir de datos de pedidos y cómo funciona la estructura input-target, consulte la [documentación detallada del CSV](csv_structure.md).
+
 ## Instalación
 
 1. Clonar el repositorio
