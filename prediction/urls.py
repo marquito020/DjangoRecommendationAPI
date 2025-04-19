@@ -24,7 +24,16 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Recommendation API",
       default_version='v1',
-      description="API para sistema de recomendación de productos",
+      description="""
+      API para sistema de recomendación de productos.
+      
+      Esta API proporciona endpoints para:
+      - Entrenar el modelo de recomendación
+      - Obtener recomendaciones de productos basadas en productos de entrada
+      - Visualizar el proceso de entrenamiento del modelo (JSON y HTML)
+      
+      Para más información, visite la documentación completa en: /redoc/
+      """,
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="contact@example.com"),
       license=openapi.License(name="BSD License"),

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización del Entrenamiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .visualization-container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .visualization-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .description {
+            background-color: #f4f6f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a.button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        a.button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualización del Proceso de Entrenamiento</h1>
+    
+    <div class="visualization-container">
+        <img id="visualization" class="visualization-image" src="{{ image }}" alt="Visualización del entrenamiento">
+    </div>
+    
+    <div class="description">
+        <h2>Descripción del Proceso</h2>
+        <div id="description-content">{{ description|safe }}</div>
+    </div>
+    
+    <div>
+        <h2>API Endpoints</h2>
+        <p>Puedes acceder a esta visualización mediante el endpoint:</p>
+        <pre>GET /api/training-visualization/</pre>
+        <p>Para obtener los datos directamente en formato JSON:</p>
+        <pre>curl -X GET http://localhost:8000/api/training-visualization/</pre>
+        
+        <a href="/swagger/" class="button">Ver Documentación Swagger</a>
+    </div>
+    
+    <script>
+        // Si se necesita alguna funcionalidad JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Por ejemplo, convertir markdown a HTML si es necesario
+            const descriptionContent = document.getElementById('description-content');
+            // Aquí puedes agregar código para formatear contenido si lo necesitas
+        });
+    </script>
+</body>
+</html> 

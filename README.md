@@ -83,6 +83,29 @@ Respuesta:
 }
 ```
 
+### Visualización del Entrenamiento
+
+La API proporciona dos endpoints para visualizar el proceso de entrenamiento:
+
+#### Visualización JSON
+```
+GET /api/training-visualization/
+```
+
+Devuelve una respuesta JSON con:
+- `image`: Una imagen en formato base64 que muestra el proceso de entrenamiento
+- `description`: Una descripción textual del proceso
+
+#### Visualización HTML
+```
+GET /training-visualization/
+```
+
+Muestra una página HTML interactiva con:
+- Gráficos que ilustran el proceso de entrenamiento
+- Explicación detallada de cada paso
+- Enlaces a la documentación
+
 ## Funcionamiento interno
 
 1. El sistema carga los datos desde el archivo CSV
